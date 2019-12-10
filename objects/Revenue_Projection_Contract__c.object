@@ -133,6 +133,12 @@
                     <default>false</default>
                     <label>Manual</label>
                 </value>
+                <value>
+                    <fullName>Auto</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Auto</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
     </fields>
