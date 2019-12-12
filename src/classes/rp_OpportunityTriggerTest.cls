@@ -2,7 +2,7 @@
 private class rp_OpportunityTriggerTest {
     @isTest static void createOppTest() {
         Test.startTest();
-        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Approved_Account'];
+        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Ship_Service_Account'];
         RecordType opprt = [Select Id From RecordType Where SObjectType = 'Opportunity' And DeveloperName = 'Deal'];
         
         Account acc = new Account(Name='TestAccount',Country_of_Domicile__c='Norway',RecordTypeId=accrt.Id,Country_Codex__c='NOR',Website='www.test.no.invalid.webpage',Industry_Sector__c='11_Bluewater',
@@ -29,7 +29,7 @@ private class rp_OpportunityTriggerTest {
     
     @isTest static void updateOppTest() {
         Test.startTest();
-        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Approved_Account'];
+        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Ship_Service_Account'];
         RecordType opprt = [Select Id From RecordType Where SObjectType = 'Opportunity' And DeveloperName = 'Deal'];
         
         Account acc = new Account(Name='TestAccount',Country_of_Domicile__c='Norway',RecordTypeId=accrt.Id,Country_Codex__c='NOR',Website='www.test.no.invalid.webpage',Industry_Sector__c='11_Bluewater',
@@ -60,7 +60,7 @@ private class rp_OpportunityTriggerTest {
     
     @isTest static void updateOppTest2() {
         Test.startTest();
-        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Approved_Account'];
+        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Ship_Service_Account'];
         RecordType opprt = [Select Id From RecordType Where SObjectType = 'Opportunity' And DeveloperName = 'Deal'];
         
         Account acc = new Account(Name='TestAccount',Country_of_Domicile__c='Norway',RecordTypeId=accrt.Id,Country_Codex__c='NOR',Website='www.test.no.invalid.webpage',Industry_Sector__c='11_Bluewater',
@@ -91,7 +91,7 @@ private class rp_OpportunityTriggerTest {
     
     @isTest static void spotOppTest2() {
         Test.startTest();
-        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Approved_Account'];
+        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Ship_Service_Account'];
         RecordType opprt = [Select Id From RecordType Where SObjectType = 'Opportunity' And DeveloperName = 'Spot'];
         
         Account acc = new Account(Name='TestAccount',Country_of_Domicile__c='Norway',RecordTypeId=accrt.Id,Country_Codex__c='NOR',Website='www.test.no.invalid.webpage',Industry_Sector__c='11_Bluewater',
@@ -118,7 +118,7 @@ private class rp_OpportunityTriggerTest {
     
     @isTest static void updateOppLineTest() {
         Test.startTest();
-        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Approved_Account'];
+        RecordType accrt = [Select Id From RecordType Where SObjectType = 'Account' And DeveloperName = 'Ship_Service_Account'];
         RecordType opprt = [Select Id From RecordType Where SObjectType = 'Opportunity' And DeveloperName = 'Deal'];
         
         Account acc = new Account(Name='TestAccount',Country_of_Domicile__c='Norway',RecordTypeId=accrt.Id,Country_Codex__c='NOR',Website='www.test.no.invalid.webpage',Industry_Sector__c='11_Bluewater',
