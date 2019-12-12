@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>rp_ContractTriggerTest</members>
+        <members>rp_OpportunityTriggerTest</members>
+        <members>rp_checkRecursive</members>
+        <members>rp_contractRevenueProjectionJob</members>
+        <members>rp_contractVesselBillingPlans</members>
+        <members>rp_oppBillingPlans</members>
+        <members>rp_opportunityRevenueProjectionFunctions</members>
+        <members>rp_opportunityRevenueProjectionJob</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>ContractProductPriceTrigger</members>
+        <members>ContractTrigger</members>
+        <members>ContractVesselTrigger</members>
+        <members>OpportunityBillingPlanTrigger</members>
+        <members>OpportunityLineItemTrigger</members>
+        <members>OpportunityTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Contract_Vessels__c.Create_Revenue_Projections__c</members>
+        <members>Contract_Vessels__c.Revenue_Projection_Batch_Processed__c</members>
+        <members>Opportunity.Billing_Method__c</members>
+        <members>Opportunity.Billing_Method_value__c</members>
+        <members>Opportunity.Create_Revenue_Projections__c</members>
+        <members>Opportunity.Potential_Deal_Duration_months__c</members>
+        <members>Opportunity.Qualified_for_Revenue_Projection__c</members>
+        <members>Opportunity.Time_to_full_Contract_implementation__c</members>
+        <members>Opportunity.Time_to_revenue_days__c</members>
+        <members>OpportunityLineItem.Revenue_Projection_Batch_Processed__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Contract_Billing_Plan__c</members>
+        <members>Opportunity_Billing_Plan__c</members>
+        <members>Revenue_Projection_Contract__c</members>
+        <members>Revenue_Projection_Opportunity__c</members>
+        <members>Revenue_Projection_Trigger_Controls__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Contract_Billing_Plan__c-Contract Billing Plan Layout</members>
+        <members>Opportunity_Billing_Plan__c-Opportunity Billing Plan Layout</members>
+        <members>Revenue_Projection_Opportunity__c-Revenue Projection Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Contract_Vessels__c.rp_CRPflagChangeRule</members>
+        <members>Contract_Vessels__c.rp_endDateRequired</members>
+        <members>Contract_Vessels__c.rp_startDateRequired</members>
+        <members>Opportunity.rp_PDDChangeNotAllowed</members>
+        <members>Opportunity.rp_TTFCIChangeNotAllowed</members>
+        <members>Opportunity.rp_billingMethodCRPRule</members>
+        <members>Opportunity.rp_billingMethodChangeNotAllowed</members>
+        <members>Opportunity.rp_billingMethodPDDMMandatory</members>
+        <members>Opportunity.rp_billingMethodTTFCIMandatory</members>
+        <members>Opportunity.rp_billingMethodTTFCIRule</members>
+        <members>Opportunity.rp_billingMethodTTRDMandatory</members>
+        <members>Opportunity.rp_createProjectionChangeStageNameRule</members>
+        <members>Opportunity.rp_createProjectionOnOppCreate</members>
+        <name>ValidationRule</name>
+    </types>
+    <version>45.0</version>
+</Package>
