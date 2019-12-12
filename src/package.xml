@@ -22,7 +22,6 @@
     </types>
     <types>
         <members>Contract_Vessels__c.Create_Revenue_Projections__c</members>
-        <members>Contract_Vessels__c.Revenue_Projection_Batch_Processed__c</members>
         <members>Opportunity.Billing_Method__c</members>
         <members>Opportunity.Billing_Method_value__c</members>
         <members>Opportunity.Create_Revenue_Projections__c</members>
