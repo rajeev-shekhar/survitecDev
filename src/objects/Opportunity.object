@@ -718,10 +718,10 @@ You may estimate in the beginning of the process, but an accurate duration must 
     </fields>
     <fields>
         <fullName>Time_to_revenue_days__c</fullName>
-        <defaultValue>90</defaultValue>
+        <defaultValue>0</defaultValue>
         <externalId>false</externalId>
         <inlineHelpText>Please enter the expected number of days between the Opportunity Close Date and when the revenue starts.</inlineHelpText>
-        <label>Time to revenue (days)</label>
+        <label>Time to first invoice (days)</label>
         <precision>18</precision>
         <required>false</required>
         <scale>0</scale>
