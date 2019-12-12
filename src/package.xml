@@ -43,7 +43,7 @@
     <types>
         <members>Contract_Billing_Plan__c-Contract Billing Plan Layout</members>
         <members>Opportunity_Billing_Plan__c-Opportunity Billing Plan Layout</members>
-        <members>Revenue_Projection_Contract__c-Revenue Projection (Contract) Layout</members>
+        <members>Revenue_Projection_Contract__c-Revenue Projection Contract Layout</members>
         <members>Revenue_Projection_Opportunity__c-Revenue Projection Layout</members>
         <name>Layout</name>
     </types>
