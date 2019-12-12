@@ -1,7 +1,7 @@
 //Author: Rajeev Shekhar
 
 public with sharing class rp_contractVesselBillingPlans {
-    //Create the Opportunity Billing Plan data
+    //Create the Contract Billing Plan data
     public static void actionsOnInsert(List<Contract_Vessels__c> vessels) {
         Set<Id> recordIds = new Set<Id>();
         for(Contract_Vessels__c v : vessels) {
@@ -40,7 +40,7 @@ public with sharing class rp_contractVesselBillingPlans {
             String contractRT_Id = contRT.get('Safety_Contract').getRecordTypeId();
             
             Contract_Vessels__c[] vesselRecords = [SELECT Id, Contract__c, Vsl_End_Date__c, Vsl_Start_Date__c,Contract__r.Status,Contract__r.RecordTypeId,Contract__r.Invoicing_Intervals__c,
-                                                   Create_Revenue_Projections__c,Name FROM Contract_Vessels__c WHERE Id IN :vesselIds];
+                                                   Create_Revenue_Projections__c,Name,Contract__r.CurrencyIsoCode FROM Contract_Vessels__c WHERE Id IN :vesselIds];
 
             for(Contract_Vessels__c o : vesselRecords) {
                 if(o.Contract__r.RecordTypeId == contractRT_Id && o.Contract__r.Status == 'Active' && o.Create_Revenue_Projections__c && String.IsNotBlank(o.Contract__r.Invoicing_Intervals__c)) {
@@ -59,6 +59,7 @@ public with sharing class rp_contractVesselBillingPlans {
                         cbp.Contract_Vessel__c = o.Id;
                         cbp.Name = o.Name;
                         cbp.Order__c = i;
+                        cbp.CurrencyIsoCode = o.Contract__r.CurrencyIsoCode;
                         if(i == 1) billingDate = o.Vsl_Start_Date__c;
                         if(i > 1) billingDate = billingDate.addMonths(billingMethodValue.intValue());
                         cbp.Billing_Date__c = billingDate;

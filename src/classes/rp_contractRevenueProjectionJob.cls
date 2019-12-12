@@ -17,7 +17,7 @@ public with sharing class rp_contractRevenueProjectionJob implements Queueable {
             Set<Id> ToUpdate = new Set<Id>(); 
             Map<Id,Map<Date,Decimal>> priceDateMap = new Map<Id,Map<Date,Decimal>>();     
             List<Contract_Vessels__c> toUpdateCVs = new List<Contract_Vessels__c>();
-            Vessel_Product__c[] vesselProducts = [SELECT Id,Name,Contract_Vessel__c,Contract_Vessel__r.Contract__c,CurrencyIsoCode,Currency__c,Product2__c,Quantity__c,Unit_Price__c,Contract_Vessel__r.Contract__r.AccountId,Contract_Vessel__r.Name FROM
+            Vessel_Product__c[] vesselProducts = [SELECT Id,Name,Contract_Vessel__c,Contract_Vessel__r.Contract__c,Contract_Vessel__r.Contract__r.CurrencyIsoCode,Currency__c,Product2__c,Quantity__c,Unit_Price__c,Contract_Vessel__r.Contract__r.AccountId,Contract_Vessel__r.Name FROM
                                                   Vessel_Product__c WHERE Contract_Vessel__c IN :cvIds AND Contract_Vessel__r.Create_Revenue_Projections__c = true];
             
             for(Vessel_Product__c oli : vesselProducts) {
@@ -71,7 +71,7 @@ public with sharing class rp_contractRevenueProjectionJob implements Queueable {
                         rpo.Product__c = oli.Product2__c;
                         rpo.Status__c = 'Valid';
                         rpo.Name = oli.Contract_Vessel__r.Name;
-                        rpo.CurrencyISOCode = oli.Currency__c;
+                        rpo.CurrencyISOCode = oli.Contract_Vessel__r.Contract__r.CurrencyIsoCode;
                         rpolist.add(rpo);
                     }
                     ToUpdate.add(oli.Contract_Vessel__c);
