@@ -26,7 +26,6 @@
         <members>Opportunity.Billing_Method_value__c</members>
         <members>Opportunity.Create_Revenue_Projections__c</members>
         <members>Opportunity.Potential_Deal_Duration_months__c</members>
-        <members>Opportunity.Qualified_for_Revenue_Projection__c</members>
         <members>Opportunity.Time_to_full_Contract_implementation__c</members>
         <members>Opportunity.Time_to_revenue_days__c</members>
         <members>OpportunityLineItem.Revenue_Projection_Batch_Processed__c</members>
